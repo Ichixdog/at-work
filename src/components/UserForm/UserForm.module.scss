@@ -1,0 +1,44 @@
+@use "../../App.scss" as *;
+
+.form {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    label {
+      @include text1s;
+      color: $gray-900;
+    }
+
+    input {
+      border: 2px solid $gray-300;
+      border-radius: 50px;
+      padding: 10px 8px 10px 16px;
+      width: 100%;
+      @include text2;
+      color: $gray-900;
+      outline: none;
+    }
+
+    .error {
+      @include caption;
+      color: red;
+    }
+  }
+
+  .submitBtn {
+    width: 170px;
+    background-color: $gray-900;
+    @include text2s;
+    color: $gray-50;
+    border: none;
+    padding: 12px 42px;
+    border-radius: 50px;
+  }
+}
