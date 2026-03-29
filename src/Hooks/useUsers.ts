@@ -33,7 +33,6 @@ export function useUsers() {
     queryKey: ["users"],
     queryFn: async () => {
       console.log("🌐 Загрузка с API...");
-      // Искусственная задержка 2 секунды
       await new Promise((resolve) => setTimeout(resolve, 2000));
       const users = await api.getUsers();
       console.log("✅ Загружено:", users.length);
