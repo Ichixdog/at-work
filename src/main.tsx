@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import './index.scss'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout.tsx';
 import { UserPage } from './pages/UsersPage/UserPage.tsx';
 import { UserEditorPage } from './pages/UserEditorPage/UserEditorPage.tsx';
@@ -22,7 +22,7 @@ const queryClient = new QueryClient({
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter basename='/at-work/'>
+      <HashRouter basename='/at-work/'>
         <Layout>
           <Routes>
             <Route path="/" element={<Navigate to="/users" replace />} />
@@ -30,7 +30,7 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/users/:id/edit" element={<UserEditorPage />} />
           </Routes>
         </Layout>
-      </BrowserRouter>
+      </HashRouter>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   </StrictMode>
