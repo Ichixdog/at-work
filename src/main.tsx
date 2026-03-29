@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import './index.scss'
-import App from './App.tsx'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout.tsx';
 import { UserPage } from './pages/UsersPage/UserPage.tsx';

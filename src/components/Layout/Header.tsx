@@ -5,7 +5,7 @@ import styles from "./Layout.module.scss"
 import { useUsers } from "../../Hooks/useUsers"
 
 export const Header = () => {
-    const activeUsers = useUsers()
+    const {activeUsers} = useUsers()
 
     return(
         <>
@@ -30,7 +30,7 @@ export const Header = () => {
                             <div className={styles.profileImg}>
                                 <img src={avatar} alt="avatar" />
                             </div>
-                            <div className={styles.profileName}>{activeUsers.activeUsers[0].username}</div>
+                            <div className={styles.profileName}>{activeUsers[0].username}</div>
                         </div>
                     </div>
                 </div>

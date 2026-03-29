@@ -13,9 +13,8 @@ interface UserCardProps {
     isProcessing?: boolean;
 }
 
-export const UserCard = ({user, onEdit, onArchive, onRestore, onHide, isProcessing}: UserCardProps) => {
+export const UserCard = ({user, onEdit, onArchive, onRestore, onHide}: UserCardProps) => {
 
-const isArchived = user.isArchived;
 const [ dropDownOpen, setDropDownOpen ] = useState(false)
 
     return(
