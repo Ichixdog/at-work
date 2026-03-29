@@ -22,7 +22,7 @@ const queryClient = new QueryClient({
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <HashRouter basename='/at-work/'>
+      <HashRouter>
         <Layout>
           <Routes>
             <Route path="/" element={<Navigate to="/users" replace />} />
